@@ -1,0 +1,58 @@
+html {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.findagym_section1 {
+    padding-top: 20px;
+    text-align: center;
+    height: 680px;
+}
+
+.findagym_section1 > svg {
+    margin-top: 150px;
+    width: 200px;
+}
+
+.findagym_section2 {
+    padding: 130px 0px 130px 0px;
+    background-color: black;
+    text-align: center;
+}
+
+@media only screen and (max-width:1490px) {
+    .findagym_section2 > iframe {
+        max-width: 800px;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width:1030px) {
+    .findagym_section2 > iframe {
+        max-width: 550px;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width:898px) {
+    .findagym_section1 > h1 {
+        font-size: 41px;
+    }
+    .findagym_section1 > svg {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width:690px) {
+    .findagym_section2 > iframe {
+        max-width: 290px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width:490px) {
+    .findagym_section1 > svg {
+        width: 85px;
+    }
+}

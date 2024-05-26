@@ -1,0 +1,206 @@
+.navbar {
+    display: flex;
+    background-color: black;
+    height: 190px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+    
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    height: 325px;
+    margin-bottom: 30px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-menu > a {
+    margin: 60px;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+  }
+
+.nav-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-profile > a {
+    margin: 60px;
+}
+
+.nav-profile > svg {
+    margin: 60px;
+}
+
+.profile-svg {
+    height: 30px;
+}
+
+.navbar-container > svg {
+    max-height: 70px;
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.hiddenLinks {
+    position: fixed;
+    display: flex;
+    top: 190px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    text-align: flex-start;
+    transition: 0.3s;
+    left: -100%;
+}
+
+.hiddenLinks > a {
+    padding: 15px;
+    margin: 5px;
+}
+
+.navbar-find-a-gym, .navbar-memberships, .navbar-join-us, .navbar-login {
+    transition: 0.1s;
+}
+
+.navbar-find-a-gym:hover, .navbar-memberships:hover, .navbar-join-us:hover, .navbar-login:hover {
+    opacity: 20%;
+}
+
+.off_screen_menu {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.3s ease;
+    z-index: 2;
+  }
+  
+  .off_screen_menu > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    padding: 0px;
+  }
+  
+  .off_screen_menu#open {
+    right: 0;
+  }
+  
+  .ham_menu {
+    height: 52px;
+    width: 40px;
+    top: 10px;
+    right: 20px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+  }
+  
+  .ham_menu span {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s ;
+  }
+  
+  .ham_menu#open {
+    margin-top: -5px;
+    position: fixed;
+  }
+  
+  .ham_menu span:nth-child(1) {
+    top: 25%;
+  }
+  
+  .ham_menu span:nth-child(3) {
+    top: 75%;
+  }
+  
+  .ham_menu#open span:nth-child(1) {
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .ham_menu#open span:nth-child(2) {
+    opacity: 0%;
+  }
+  
+  .ham_menu#open span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+  }
+  
+  .off_screen_menu > ul > a {
+    text-decoration: none;
+    display: flex;
+  }
+
+@media only screen and (max-width:1432px) {
+    .navbar-find-a-gym {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1157px) {
+    .navbar-join-us {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:790px) {
+    .navbar-login {
+        display: none;
+    }
+    .navbar-memberships {
+        display: none;
+    }
+
+    .ham_menu {
+        display: block;
+    }
+}
+
+
+
